@@ -38,3 +38,23 @@ def pd(ln, ld):
 l1 = [4,5,6]
 l2 = [1,2,3]
 print(pd(l1, l2))
+
+# ----
+
+def pd(ln, ld):
+    assert len(ln) == len(ld), 'Lists must have the same length'
+    assert len(ln) != 0 and len(ld) != 0, 'Lists cannot be empty'
+    
+    l = []
+    for i in range(len(ln)):
+        try:
+            l.append(ln[i] / ld[i])
+        except ZeroDivisionError:
+            raise ValueError('Division by zero encountered')
+    return l
+
+l1 = [4, 5, 6]
+l2 = [1, 2, 3]
+
+result = pd(l1, l2)
+print(result)
