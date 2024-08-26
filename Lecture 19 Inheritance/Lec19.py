@@ -26,6 +26,3 @@ l2 = ['fish', 'cat', 'dog']
 animal = abc(l1, l2)
 for i in animal:
     print(i)
-
-# -----
-
